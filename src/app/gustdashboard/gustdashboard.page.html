@@ -1,0 +1,174 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Genius Academy Welcomes you</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <span class="slider-nav arrow-prev" (click)="slidePrev(sliderOne,slideWithNav)">
+          <div class="prev-icon-custom custon-nav" [class.disabled]="sliderOne.isBeginningSlide">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+        </span>
+      </ion-col>
+      <ion-col size="10">
+
+        <ion-slides autoplay="5000" loop="true" speed="300" pager="true" [options]="slideOptsOne" #slideWithNav
+          (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+          <ion-slide *ngFor="let s of sliderOne.slidesItems">
+            <img width="800px" height="800px" src="../../assets/img/banner{{s.id}}.jpg">
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+      <ion-col size="1">
+        <span class="slider-nav arrow-next" (click)="slideNext(sliderOne,slideWithNav)">
+          <div class="next-icon-custom custon-nav" [class.disabled]="sliderOne.isEndSlide">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <h1 style="color: #007EB9;">Genius Academy</h1>
+  <h5 style="color: #E5322D;">“ Where EDUCATION is the Only PRIORITY ”</h5>
+  <p style="font-size: 10px;">Our vision is to provide a educational set up that works towards the overall development of students by strengthening the brightest and young minds to achieve and fly high in sky so as to achieve best in their lives. At Genius Academy we nurture the students to explore their full potential so as to boost their self-confidence and moral in order to realize their dreams by advanced teaching methodology.</p>
+  <img style="width: 100%;" src="../../assets/img/homepic1.jpg">
+  <div class="our-cources" style="background: url(../../assets/img/cources-bg.jpg) no-repeat center top / cover">
+  <p style="size: 18px; ">
+    Unique Features Of Our Programs
+  </p>
+  <h1 style="size:30px">
+    What Do You Want To Study?
+  </h1>
+  <div class="scroll" scrollX="true">
+      <span class="spanDesign">
+        <img src="../../assets/img/cources/xixiicet.jpg" >
+        <h1>
+          XI+XII(CET)
+        </h1>
+      </span>
+      <span class="spanDesign">
+        <img src="../../assets/img/cources/xiijee.jpg" >
+        <h1>
+          XII(JEE)
+        </h1>
+      </span>
+      <span class="spanDesign">
+        <img src="../../assets/img/cources/xiicet.jpg" >
+        <h1>
+          XII(CET)
+        </h1>
+      </span>
+        <span class="spanDesign">
+          <img src="../../assets/img/cources/xiineet.jpg" >
+          <h1>
+            XII(NEET)
+          </h1>
+        </span>
+        <span class="spanDesign">
+          <img src="../../assets/img/cources/itfoundation.jpg" >
+          <h1>
+            IIT-FOUNDATION
+          </h1>
+        </span>
+        <span class="spanDesign">
+          <img src="../../assets/img/cources/xixiijee.jpg" >
+          <h1>
+            XI+XII(JEE)
+          </h1>
+        </span>
+        <span class="spanDesign">
+          <img src="../../assets/img/cources/xixiineet.jpg" >
+          <h1>
+            XI+XII(NEET)
+          </h1>
+        </span>
+      </div>
+</div>
+
+<div>
+  <p>
+    Genius Academy Where Education Is The Only Priority.
+  </p>
+  <h1>
+    Results
+  </h1>
+  <div class="scroll" scrollX="true">
+      <span class="spanDesign">
+        <img src="../../assets/img/results/result-2017.jpg" >
+        <h1>
+          Results for the Academic Year 2016-2017
+        </h1>
+      </span>
+      <span class="spanDesign">
+        <img src="../../assets/img/results/result-2018.jpg" >
+        <h1>
+          Results for the Academic Year 2017-2018
+        </h1>
+      </span>
+      <span class="spanDesign">
+        <img src="../../assets/img/results/result-2019.jpg" >
+        <h1>
+          Results for the Academic Year 2018-2019
+        </h1>
+      </span>
+      </div>
+</div>
+
+<ion-list>
+  <ion-item>
+    <ion-list>
+<ion-item (click)="chanage('aboutus')"> 
+  <h1>About Us</h1>
+</ion-item>
+    <ion-item *ngIf="aboutUs">
+      <p>We, at Genius Academy, not only aim at providing you with the best guidance to shape up your career, but also aim at making it immune to the changing scenarios in the career.</p>
+    </ion-item>
+  </ion-list>
+  </ion-item>
+  <ion-item>
+    <ion-list>
+      <ion-item (click)="chanage('ourcource')">
+        <h1>Our Cource</h1>
+      </ion-item>
+      <ion-list *ngIf="ourCource">XI+XII (JEE)</ion-list>
+      <ion-list *ngIf="ourCource">XI+XII (NEET)</ion-list>
+      <ion-list *ngIf="ourCource">XI+XII (CET)</ion-list>
+      <ion-list *ngIf="ourCource">XII (JEE)</ion-list>
+      <ion-list *ngIf="ourCource">XII (CET)</ion-list>
+      <ion-list *ngIf="ourCource">XII (NEET)</ion-list>
+      <ion-list *ngIf="ourCource">IIT- FOUNDADATION</ion-list>
+        </ion-list>
+  </ion-item>
+  <ion-item>
+    <ion-list>
+      <ion-item (click)="chanage('whygenius')">
+        <h1>WHY GENIUS ACADEMY</h1>
+      </ion-item>
+      <ion-list *ngIf="whyGenius">About Us</ion-list>
+      <ion-list *ngIf="whyGenius">Results</ion-list>
+      <ion-list *ngIf="whyGenius">Faq</ion-list>
+      <ion-list *ngIf="whyGenius">Testimonials</ion-list>
+      <ion-list *ngIf="whyGenius">Events</ion-list>
+        </ion-list>
+  </ion-item>
+  <ion-item>
+    <ion-list>
+      <ion-item (click)="chanage('ourlocation')">
+        <h1>OUR LOCATION</h1>
+      </ion-item>
+          <ion-item *ngIf="isLocation">
+            <img src="assets/img/google-map.jpg">
+          </ion-item>
+        </ion-list>
+  </ion-item>
+</ion-list>
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "GeniusClasses",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

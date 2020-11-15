@@ -1,0 +1,27 @@
+ion-toolbar{--ion-background-color:#3498db!important; }
+ion-menu-button{--color:#fff!important }
+ion-item{--background: none;  --inner-border-width: 0; }
+h4, span, p{--ion-font-family: 'OpenSans-Regular'!important; font-size: 16px!important; white-space: normal;}
+ion-header ion-toolbar{color: var(--ion-color-primary-contrast)!important;}
+
+
+// ion-item{--border-width: 0px !important;}
+
+.content-Bg{--background: #f7f8fb!important;}
+ion-card{box-shadow: 1px 1px 10px #ddd!important;}
+.attendance-Calendar-Month ion-select{float: right; max-width: 100%!important; text-align: right; position: relative; color: #424242!important; --ion-font-family: 'OpenSans-Regular'!important; font-weight: 600; width: 100%; padding: 0;}
+.select-icon-inner {top: 65%!important; color: #3498db!important;  opacity: 1!important;  left: 8px!important;}
+.calendarTable{--border-width: 0px !important; --padding-start:0px; --inner-padding-end: 0;}
+
+.calendarTable table {width: 100%;}
+.calendarTable th {height: 39px; vertical-align: middle; min-width: 42px; color: #a39f9f; font-size: 11px;}
+.calendarTable td{border: 1px solid #ddd; padding: 0 1px; vertical-align: top;}
+.calendarTable td .calender {text-align: center !important; border: none !important; width: 100%;}
+.calendarTable td .calender h6 {font-size: 14px;}
+.calendarTable .calender h4 {font-size: 12px; color: #424242; text-align: right; margin: 1px; font-family: var(  --ion-font-family-Semibold)!important;}
+.calendarTable .calender .shiftCode,
+.calendarTable .calender .swipHrs,
+.calendarTable .calender .regHrs {font-size: 10px!important; text-align: right; display: block; color: #202020; --ion-font-family: 'OpenSans-Regular'!important;}
+.calendarTable .calender span {padding: 0 0 3px;}
+.calender .present {font-size: 12px!important; text-align: right; display: block;}
+.calendarTable .calender .square {height: 5px; width: 5px; background-color: #ffffff; float: right; margin: 0 0 5px 0px;}
